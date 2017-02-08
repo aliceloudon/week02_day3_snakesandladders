@@ -37,6 +37,7 @@ class Board
         return "#{player} wins"
       end
     end
+    return nil
   end
 
   def entire_game(dice)

@@ -45,7 +45,7 @@ class TestBoard < Minitest::Test
   # end
 
   def test_finish_game_fail
-    assert_equal("#{@player2} wins", @board.finish_game)
+    assert_equal(nil, @board.finish_game)
   end
 
   # def test_entire_game
