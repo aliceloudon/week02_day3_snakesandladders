@@ -8,4 +8,8 @@ class Ladder
   def move_player_up(player)
     player.move(@length)
   end
+
+  def show_bottom_of_ladder
+    return @bottom_of_ladder
+  end
 end

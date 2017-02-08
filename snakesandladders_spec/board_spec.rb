@@ -22,10 +22,16 @@ class TestBoard < Minitest::Test
     @board = Board.new(@players_array, @snakes_array, @ladders_array)
   end
 
-  def test_if_player_lands_on_snake
-    @player1.move(3)   
-    @board.if_player_lands_on_snake(@player1)
-    assert_equal(7, @player1.show_position)
+#  def test_if_player_lands_on_snake
+#    @player1.move(3)   
+#    @board.if_player_lands_on_snake(@player1)
+#    assert_equal(7, @player1.show_position)
+#  end
+
+  def test_if_player_lands_on_ladder
+    @player1.move(16)
+    @board.if_player_lands_on_ladder(@player1)
+    assert_equal(78,@player1.show_position)
   end
 
 end

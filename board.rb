@@ -14,4 +14,12 @@ class Board
     end
   end
 
+  def if_player_lands_on_ladder(player)
+    for ladder in @ladders
+      if player.show_position == ladder.show_bottom_of_ladder
+        ladder.move_player_up(player)
+      end
+    end
+  end
+
 end
