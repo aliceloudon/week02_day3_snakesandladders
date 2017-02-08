@@ -31,6 +31,21 @@ class Board
     if_player_lands_on_ladder(player)
   end
 
+  def finish_game
+    for player in @players
+      if player.show_position == 100
+        return "#{player} wins"
+      end
+    end
+  end
 
+  def entire_game(dice)
+    for player in @players
+      player.entire_turn(dice)
+      if @board.finish_game == "#{player} wins"
+        return "game over"
+      end
+    end
+  end
 
 end

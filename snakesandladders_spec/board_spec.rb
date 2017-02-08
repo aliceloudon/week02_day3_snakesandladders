@@ -34,15 +34,23 @@ class TestBoard < Minitest::Test
 #    assert_equal(78,@player1.show_position)
 #  end
 
-  def test_entire_turn
-#roll
-#move
-#check snake
-#check ladder
-#end
-  @board.entire_turn(@player1,@dice)
-  assert_equal(12,@player1.show_position)
+#  def test_entire_turn
+#  @board.entire_turn(@player1,@dice)
+#  assert_equal(12,@player1.show_position)
+#  end
 
+  # def test_finish_game_pass
+  #   @player1.move(88)
+  #   assert_equal("#{@player1} wins", @board.finish_game)
+  # end
+
+  def test_finish_game_fail
+    assert_equal("#{@player2} wins", @board.finish_game)
   end
+
+  # def test_entire_game
+  #   assert_equal("#{@player1} wins" || "#{@player2} wins", @board.entire_game)
+  # end
+
 
 end
