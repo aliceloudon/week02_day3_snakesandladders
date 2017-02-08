@@ -13,4 +13,12 @@ class Player
     @position += number
   end
 
+  def roll_dice(dice)
+    dice.roll
+  end
+
+  def move_using_dice(dice)
+    @position += dice.roll
+  end
+
 end
