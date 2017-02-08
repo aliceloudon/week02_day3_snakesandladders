@@ -12,6 +12,7 @@ class Board
         snake.move_player_down(player)
       end
     end
+    return
   end
 
   def if_player_lands_on_ladder(player)
@@ -20,6 +21,16 @@ class Board
         ladder.move_player_up(player)
       end
     end
+    return
   end
+
+  def entire_turn(player,dice)
+    number = player.roll_dice(dice)
+    player.move(number)
+    if_player_lands_on_snake(player)
+    if_player_lands_on_ladder(player)
+  end
+
+
 
 end

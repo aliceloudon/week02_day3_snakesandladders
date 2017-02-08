@@ -9,10 +9,10 @@ require_relative('../board.rb')
 class TestBoard < Minitest::Test
 
   def setup
-    @snake1 = Snake.new(15, -8)
+    @snake1 = Snake.new(30, -8)
     @snake2 = Snake.new(45, -20)
     @snakes_array = [@snake1, @snake2]
-    @ladder1 = Ladder.new(28, 50)
+    @ladder1 = Ladder.new(18, 50)
     @ladder2 = Ladder.new(56, 18)
     @ladders_array = [@ladder1, @ladder2]
     @player1 = Player.new("Player1", 12)
@@ -28,10 +28,21 @@ class TestBoard < Minitest::Test
 #    assert_equal(7, @player1.show_position)
 #  end
 
-  def test_if_player_lands_on_ladder
-    @player1.move(16)
-    @board.if_player_lands_on_ladder(@player1)
-    assert_equal(78,@player1.show_position)
+#  def test_if_player_lands_on_ladder
+#    @player1.move(16)
+#    @board.if_player_lands_on_ladder(@player1)
+#    assert_equal(78,@player1.show_position)
+#  end
+
+  def test_entire_turn
+#roll
+#move
+#check snake
+#check ladder
+#end
+  @board.entire_turn(@player1,@dice)
+  assert_equal(12,@player1.show_position)
+
   end
 
 end
