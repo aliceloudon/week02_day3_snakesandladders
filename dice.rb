@@ -3,7 +3,3 @@ class Dice
     return rand(2..12)
   end
 end
-
-dice = Dice.new
-
-dice.roll
