@@ -13,5 +13,8 @@ class TestPlayer < Minitest::Test
     assert_equal(1,@player1.show_position)
   end
 
+  def test_move
+    assert_equal(6, @player1.move(5))
+  end
 
 end

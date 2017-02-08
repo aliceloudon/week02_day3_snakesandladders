@@ -9,4 +9,8 @@ class Player
     return @position
   end
 
+  def move(number)
+    @position += number
+  end
+
 end
