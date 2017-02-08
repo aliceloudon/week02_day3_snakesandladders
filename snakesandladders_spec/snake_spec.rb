@@ -14,7 +14,4 @@ class TestSnake < Minitest::Test
     @snake1.move_player_down(@player1)
     assert_equal(1, @player1.show_position)
   end
-
-
-
 end
