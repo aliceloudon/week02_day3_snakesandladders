@@ -27,12 +27,16 @@ class TestPlayer < Minitest::Test
   # end
 
   def test_move_using_dice
+  
       @player1.move_using_dice(@dice)
-        if @player1.show_position > 15 
-          position_check = true
-        end
-        assert_nil(position_check)    
+ 
+      assert_equal(1, @player1.show_position)    
+ 
   end
+
+
+# def test_move_using_dice_
+
 
 
 end
