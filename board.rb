@@ -6,8 +6,12 @@ class Board
     @ladders = ladders
   end
 
-  def if_player_lands_on_snake
-    
+  def if_player_lands_on_snake(player)
+    for snake in @snakes
+      if player.show_position == snake.show_head
+        snake.move_player_down(player)
+      end
+    end
   end
 
 end
