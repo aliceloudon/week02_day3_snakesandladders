@@ -27,11 +27,8 @@ class TestPlayer < Minitest::Test
   # end
 
   def test_move_using_dice
-  
       @player1.move_using_dice(@dice)
- 
       assert_equal(1, @player1.show_position)    
- 
   end
 
 
