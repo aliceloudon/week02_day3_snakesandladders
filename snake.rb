@@ -9,5 +9,8 @@ class Snake
     player.move(@length)
   end
 
+  def show_head
+    return @head_of_snake    
+  end
 
 end

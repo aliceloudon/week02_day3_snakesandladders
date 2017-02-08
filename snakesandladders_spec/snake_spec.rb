@@ -14,4 +14,9 @@ class TestSnake < Minitest::Test
     @snake1.move_player_down(@player1)
     assert_equal(1, @player1.show_position)
   end
+
+  def test_show_head
+    assert_equal(74, @snake1.show_head)
+  end
+
 end

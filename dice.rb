@@ -1,3 +1,5 @@
 class Dice
-  def   end
+  def roll
+    return rand(2..12)
+  end
 end
